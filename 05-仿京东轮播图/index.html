@@ -28,7 +28,7 @@
             function moveL() {
                 i--;
                 if (i == -1) {
-                    i = l-1;
+                    i = l - 1;
                 }
                 $(".num li").eq(i).addClass("active").siblings().removeClass("active");
                 $(".img li").eq(i).fadeIn(300).siblings().fadeOut(300);
@@ -64,6 +64,79 @@
             })
         })
     </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "microsoft yahei", Arial, Helvetica, sans-serif;
+        }
+        ul {
+            list-style-type: none;
+        }
+        .out {
+            width: 730px;
+            height: 454px;
+            /*border: 5px solid #000;*/
+            margin: 50px auto;
+            position: relative;
+        }
+        .out .img li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .out .num {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            /*font-size: 0;*/
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+        }
+        .out .num li {
+            width: 20px;
+            height: 20px;
+            background: #666;
+            color: #fff;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 200;
+            line-height: 20px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            /*font-size:16px;*/
+        }
+        .out .num li.active {
+            background: #a00;
+        }
+        .out .btn {
+            position: absolute;
+            top: 50%;
+            margin-top: -30px;
+            width: 30px;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            text-align: center;
+            line-height: 60px;
+            font-size: 40px;
+            display: none;
+            cursor: pointer;
+        }
+        .out:hover .btn {
+            display: block;
+        }
+        .out .left {
+            left: 0;
+        }
+        .out .right {
+            right: 0;
+        }
+    </style>
 </head>
 
 <body>
