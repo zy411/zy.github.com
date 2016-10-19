@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <title>展示</title>
     <script rel="script" src="js/jquery-3.1.0.min.js"></script>
-    <script>
-
-    </script>
     <style>
         * {
             margin: 0;
@@ -20,28 +17,45 @@
             border-radius: 6px;
         }
         a {
-            font-size: 12px;
-            color: #3f434c;
+            font-size: 14px;
+            color: #555;
             text-decoration: none;
         }
+        a:hover{
+            text-decoration: underline;
+        }
         dl {
+
         }
         dt {
-            color: #555;
+            color: #333;
             line-height: 30px;
             height: 30px;
             background: #09f;
             margin-bottom: 1px;
             font-weight: 800;
+            cursor: pointer;
         }
         dd {
+            display: none;
             line-height: 25px;
             height: 25px;
             background: #0cf;
             margin-bottom: 1px;
             list-style: none;
         }
+        /*.dd{*/
+            /*display: block;*/
+        /*}*/
     </style>
+    <script>
+        $(function () {
+            $('.content').find('dl').click(function(){
+
+                $(this).find('dd').css('display','block')
+            })
+        })
+    </script>
 </head>
 <body>
 <header></header>
