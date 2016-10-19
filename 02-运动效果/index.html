@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运动效果</title>
+    <style>
+        #div1, #div2 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin-bottom: 10px;
+            position: absolute;
+        }
+        #div {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border: 1px red solid;
+            /*display: none;*/
+        }
+        p {
+            font-size:24px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script>
+        $(function () {
+            $('div').click(function () {
+//                $('#div').animate({width: 200, height: 200}, 2000, function () {
+//                    $('#div').animate({width: 400, height: 400}, 2000, function () {
+//                        $('#div').animate({width: 600, height: 600}, 2000, function () {
+//                            $('#div1').animate({opacity: 0.5}, 2000);
+//                            $('#div2').animate({opacity: 0.5}, 2000);
+//                        });
+//                        $('#div1').animate({height: 300}, 2000);
+//                        $('#div2').animate({width: 300, marginTop: 300}, 2000);
+//                    });
+//                    $('#div1').animate({width: 300}, 2000);
+//                    $('#div2').animate({height: 300, marginLeft: 300}, 2000);
+//                });
+//                $('#div2').animate({margin: 100}, 2000);
+//                $('div').click(function () {
+//                    $('div').stop(false);    delay
+//                });
+//                obj.unbind('click');
+                $('p').animate({opacity:0},1000).delay(4500).animate({opacity:1},500);
+                $('#div').animate({width: 200, height: 200}, 2000)
+                        .animate({width: 400, height: 400}, 2000)
+                        .animate({width: 600, height: 600}, 2000)
+                        .animate({width: 100, height: 100}, 2000);
+                $('#div1').delay(2000)
+                        .animate({width: 300}, 2000)
+                        .animate({height: 300, opacity: 0.2}, 2000)
+                        .animate({width: 100, height: 100, opacity: 1}, 2000);
+                $('#div2').animate({margin: 100}, 2000)
+                        .animate({height: 300, marginLeft: 300}, 2000)
+                        .animate({width: 300, marginTop: 300, opacity: 0.2}, 2000)
+                        .animate({width: 100, height: 100, margin: 0, opacity: 1}, 2000);
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="div">
+    <div id="div1"></div>
+    <div id="div2"><p>点我点我～</p></div>
+</div>
+</body>
+</html>
