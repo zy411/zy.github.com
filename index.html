@@ -50,14 +50,13 @@
     <script>
         //标签展开与收回
         $(function () {
-            $('dl').click(function () {
-                var dp = $(this).children('dd').css('display');
-//                console.log(dp);
-                if (dp == 'none') {
-                    $(this).siblings().children('dd').slideUp();
-                    $(this).children('dd').slideDown();
+            $('dt').click(function () {
+//                console.log($(this).siblings().is(':hidden'));
+                if ($(this).siblings().is(':hidden')) {
+                    $(this).parents().siblings().children('dd').slideUp();
+                    $(this).siblings('dd').slideDown();
                 } else {
-                    $(this).children('dd').slideUp();
+                    $(this).siblings('dd').slideUp();
                 }
             })
         })
@@ -68,111 +67,75 @@
 <div class="content">
     <dl>
         <dt>哈哈哈哈哈哈</dt>
-        <dd><a href="01-简单选项卡">01-简单选项卡</a></dd>
-        <dd><a href="02-运动效果">02-运动效果</a></dd>
-        <dd><a href="03-固定弹出层">03-固定弹出层</a></dd>
-        <dd><a href="04-拖拽">04-拖拽</a></dd>
-        <dd><a href="05-仿京东轮播图">05-仿京东轮播图</a></dd>
-        <dd><a href="06-fullPage插件实现全屏平滑切换网页">06-插件实现全屏平滑切换网页</a></dd>
+        <dd><a href="01-简单选项卡" target="_blank">01-简单选项卡</a></dd>
+        <dd><a href="02-运动效果" target="_blank">02-运动效果</a></dd>
+        <dd><a href="03-固定弹出层" target="_blank">03-固定弹出层</a></dd>
+        <dd><a href="04-拖拽" target="_blank">04-拖拽</a></dd>
+        <dd><a href="05-仿京东轮播图" target="_blank">05-仿京东轮播图</a></dd>
+        <dd><a href="06-fullPage插件实现全屏平滑切换网页" target="_blank">06-插件实现全屏平滑切换网页</a></dd>
     </dl>
     <dl>
         <dt>哈哈哈哈哈哈</dt>
-        <dd><a href="01-简单选项卡">01-简单选项卡</a></dd>
-        <dd><a href="02-运动效果">02-运动效果</a></dd>
-        <dd><a href="03-固定弹出层">03-固定弹出层</a></dd>
-        <dd><a href="04-拖拽">04-拖拽</a></dd>
-        <dd><a href="05-仿京东轮播图">05-仿京东轮播图</a></dd>
-        <dd><a href="06-fullPage插件实现全屏平滑切换网页">06-插件实现全屏平滑切换网页</a></dd>
+        <dd><a href="01-简单选项卡" target="_blank">01-简单选项卡</a></dd>
+        <dd><a href="02-运动效果" target="_blank">02-运动效果</a></dd>
+        <dd><a href="03-固定弹出层" target="_blank">03-固定弹出层</a></dd>
+        <dd><a href="04-拖拽" target="_blank">04-拖拽</a></dd>
+        <dd><a href="05-仿京东轮播图" target="_blank">05-仿京东轮播图</a></dd>
+        <dd><a href="06-fullPage插件实现全屏平滑切换网页" target="_blank">06-插件实现全屏平滑切换网页</a></dd>
     </dl>
     <dl>
         <dt>哈哈哈哈哈哈</dt>
-        <dd><a href="01-简单选项卡">01-简单选项卡</a></dd>
-        <dd><a href="02-运动效果">02-运动效果</a></dd>
-        <dd><a href="03-固定弹出层">03-固定弹出层</a></dd>
-        <dd><a href="04-拖拽">04-拖拽</a></dd>
-        <dd><a href="05-仿京东轮播图">05-仿京东轮播图</a></dd>
-        <dd><a href="06-fullPage插件实现全屏平滑切换网页">06-插件实现全屏平滑切换网页</a></dd>
+        <dd><a href="01-简单选项卡" target="_blank">01-简单选项卡</a></dd>
+        <dd><a href="02-运动效果" target="_blank">02-运动效果</a></dd>
+        <dd><a href="03-固定弹出层" target="_blank">03-固定弹出层</a></dd>
+        <dd><a href="04-拖拽" target="_blank">04-拖拽</a></dd>
+        <dd><a href="05-仿京东轮播图" target="_blank">05-仿京东轮播图</a></dd>
+        <dd><a href="06-fullPage插件实现全屏平滑切换网页" target="_blank">06-插件实现全屏平滑切换网页</a></dd>
     </dl>
     <dl>
         <dt>哈哈哈哈哈哈</dt>
-        <dd><a href="01-简单选项卡">01-简单选项卡</a></dd>
-        <dd><a href="02-运动效果">02-运动效果</a></dd>
-        <dd><a href="03-固定弹出层">03-固定弹出层</a></dd>
-        <dd><a href="04-拖拽">04-拖拽</a></dd>
-        <dd><a href="05-仿京东轮播图">05-仿京东轮播图</a></dd>
-        <dd><a href="06-fullPage插件实现全屏平滑切换网页">06-插件实现全屏平滑切换网页</a></dd>
+        <dd><a href="01-简单选项卡" target="_blank">01-简单选项卡</a></dd>
+        <dd><a href="02-运动效果" target="_blank">02-运动效果</a></dd>
+        <dd><a href="03-固定弹出层" target="_blank">03-固定弹出层</a></dd>
+        <dd><a href="04-拖拽" target="_blank">04-拖拽</a></dd>
+        <dd><a href="05-仿京东轮播图" target="_blank">05-仿京东轮播图</a></dd>
+        <dd><a href="06-fullPage插件实现全屏平滑切换网页" target="_blank">06-插件实现全屏平滑切换网页</a></dd>
     </dl>
     <dl>
         <dt>哈哈哈哈哈哈</dt>
-        <dd><a href="01-简单选项卡">01-简单选项卡</a></dd>
-        <dd><a href="02-运动效果">02-运动效果</a></dd>
-        <dd><a href="03-固定弹出层">03-固定弹出层</a></dd>
-        <dd><a href="04-拖拽">04-拖拽</a></dd>
-        <dd><a href="05-仿京东轮播图">05-仿京东轮播图</a></dd>
-        <dd><a href="06-fullPage插件实现全屏平滑切换网页">06-插件实现全屏平滑切换网页</a></dd>
+        <dd><a href="01-简单选项卡" target="_blank">01-简单选项卡</a></dd>
+        <dd><a href="02-运动效果" target="_blank">02-运动效果</a></dd>
+        <dd><a href="03-固定弹出层" target="_blank">03-固定弹出层</a></dd>
+        <dd><a href="04-拖拽" target="_blank">04-拖拽</a></dd>
+        <dd><a href="05-仿京东轮播图" target="_blank">05-仿京东轮播图</a></dd>
+        <dd><a href="06-fullPage插件实现全屏平滑切换网页" target="_blank">06-插件实现全屏平滑切换网页</a></dd>
     </dl>
     <dl>
         <dt>哈哈哈哈哈哈</dt>
-        <dd><a href="01-简单选项卡">01-简单选项卡</a></dd>
-        <dd><a href="02-运动效果">02-运动效果</a></dd>
-        <dd><a href="03-固定弹出层">03-固定弹出层</a></dd>
-        <dd><a href="04-拖拽">04-拖拽</a></dd>
-        <dd><a href="05-仿京东轮播图">05-仿京东轮播图</a></dd>
-        <dd><a href="06-fullPage插件实现全屏平滑切换网页">06-插件实现全屏平滑切换网页</a></dd>
+        <dd><a href="01-简单选项卡" target="_blank">01-简单选项卡</a></dd>
+        <dd><a href="02-运动效果" target="_blank">02-运动效果</a></dd>
+        <dd><a href="03-固定弹出层" target="_blank">03-固定弹出层</a></dd>
+        <dd><a href="04-拖拽" target="_blank">04-拖拽</a></dd>
+        <dd><a href="05-仿京东轮播图" target="_blank">05-仿京东轮播图</a></dd>
+        <dd><a href="06-fullPage插件实现全屏平滑切换网页" target="_blank">06-插件实现全屏平滑切换网页</a></dd>
     </dl>
     <dl>
         <dt>哈哈哈哈哈哈</dt>
-        <dd><a href="01-简单选项卡">01-简单选项卡</a></dd>
-        <dd><a href="02-运动效果">02-运动效果</a></dd>
-        <dd><a href="03-固定弹出层">03-固定弹出层</a></dd>
-        <dd><a href="04-拖拽">04-拖拽</a></dd>
-        <dd><a href="05-仿京东轮播图">05-仿京东轮播图</a></dd>
-        <dd><a href="06-fullPage插件实现全屏平滑切换网页">06-插件实现全屏平滑切换网页</a></dd>
+        <dd><a href="01-简单选项卡" target="_blank">01-简单选项卡</a></dd>
+        <dd><a href="02-运动效果" target="_blank">02-运动效果</a></dd>
+        <dd><a href="03-固定弹出层" target="_blank">03-固定弹出层</a></dd>
+        <dd><a href="04-拖拽" target="_blank">04-拖拽</a></dd>
+        <dd><a href="05-仿京东轮播图" target="_blank">05-仿京东轮播图</a></dd>
+        <dd><a href="06-fullPage插件实现全屏平滑切换网页" target="_blank">06-插件实现全屏平滑切换网页</a></dd>
     </dl>
     <dl>
         <dt>哈哈哈哈哈哈</dt>
-        <dd><a href="01-简单选项卡">01-简单选项卡</a></dd>
-        <dd><a href="02-运动效果">02-运动效果</a></dd>
-        <dd><a href="03-固定弹出层">03-固定弹出层</a></dd>
-        <dd><a href="04-拖拽">04-拖拽</a></dd>
-        <dd><a href="05-仿京东轮播图">05-仿京东轮播图</a></dd>
-        <dd><a href="06-fullPage插件实现全屏平滑切换网页">06-插件实现全屏平滑切换网页</a></dd>
-    </dl>
-    <dl>
-        <dt>哈哈哈哈哈哈</dt>
-        <dd><a href="01-简单选项卡">01-简单选项卡</a></dd>
-        <dd><a href="02-运动效果">02-运动效果</a></dd>
-        <dd><a href="03-固定弹出层">03-固定弹出层</a></dd>
-        <dd><a href="04-拖拽">04-拖拽</a></dd>
-        <dd><a href="05-仿京东轮播图">05-仿京东轮播图</a></dd>
-        <dd><a href="06-fullPage插件实现全屏平滑切换网页">06-插件实现全屏平滑切换网页</a></dd>
-    </dl>
-    <dl>
-        <dt>哈哈哈哈哈哈</dt>
-        <dd><a href="01-简单选项卡">01-简单选项卡</a></dd>
-        <dd><a href="02-运动效果">02-运动效果</a></dd>
-        <dd><a href="03-固定弹出层">03-固定弹出层</a></dd>
-        <dd><a href="04-拖拽">04-拖拽</a></dd>
-        <dd><a href="05-仿京东轮播图">05-仿京东轮播图</a></dd>
-        <dd><a href="06-fullPage插件实现全屏平滑切换网页">06-插件实现全屏平滑切换网页</a></dd>
-    </dl>
-    <dl>
-        <dt>哈哈哈哈哈哈</dt>
-        <dd><a href="01-简单选项卡">01-简单选项卡</a></dd>
-        <dd><a href="02-运动效果">02-运动效果</a></dd>
-        <dd><a href="03-固定弹出层">03-固定弹出层</a></dd>
-        <dd><a href="04-拖拽">04-拖拽</a></dd>
-        <dd><a href="05-仿京东轮播图">05-仿京东轮播图</a></dd>
-        <dd><a href="06-fullPage插件实现全屏平滑切换网页">06-插件实现全屏平滑切换网页</a></dd>
-    </dl>
-    <dl>
-        <dt>哈哈哈哈哈哈</dt>
-        <dd><a href="01-简单选项卡">01-简单选项卡</a></dd>
-        <dd><a href="02-运动效果">02-运动效果</a></dd>
-        <dd><a href="03-固定弹出层">03-固定弹出层</a></dd>
-        <dd><a href="04-拖拽">04-拖拽</a></dd>
-        <dd><a href="05-仿京东轮播图">05-仿京东轮播图</a></dd>
-        <dd><a href="06-fullPage插件实现全屏平滑切换网页">06-插件实现全屏平滑切换网页</a></dd>
+        <dd><a href="01-简单选项卡" target="_blank">01-简单选项卡</a></dd>
+        <dd><a href="02-运动效果" target="_blank">02-运动效果</a></dd>
+        <dd><a href="03-固定弹出层" target="_blank">03-固定弹出层</a></dd>
+        <dd><a href="04-拖拽" target="_blank">04-拖拽</a></dd>
+        <dd><a href="05-仿京东轮播图" target="_blank">05-仿京东轮播图</a></dd>
+        <dd><a href="06-fullPage插件实现全屏平滑切换网页" target="_blank">06-插件实现全屏平滑切换网页</a></dd>
     </dl>
 </div>
 <footer></footer>
