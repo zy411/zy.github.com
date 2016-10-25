@@ -64,27 +64,34 @@
 <body>
 <header></header>
 <div class="content">
-<!--读取目录生成列表--!>
-<?php
-	function filesinfo($hostdir){
-		$foldernames = array_values(array_diff(scandir($hostdir),array('..','.','js','css','images','test','index.php','新建文本文档.txt')));
-        foreach ($foldernames as $foldername){
-            $count = 0;
-            $filenames = array_values(array_diff(scandir($foldername),array('..','.','js','css','images')));
-            echo "	<dl>\n		<dt>" . $foldername . "（" . count($filenames)."）</dt>\n";
-                foreach ($filenames as $filename) {
-                    $url = "		<dd><a href=\"" . $foldername . "/" . $filename."\">" . basename($filename,'.html') . "</a></dd>\n";
-                    echo $url;
-                }
-            echo "	</dl>\n";
-            //print_r($foldernames[$count]);
-            //print_r($filenames);
-            $count ++;
-			}
-    	}
-	filesinfo(getcwd());
-?>
-</div>
-<footer></footer>
-</body>
-</html>
+    <!--读取目录生成列表--!>
+        <dl>
+            <dt>01-简单选项卡（3）</dt>
+            <dd><a href="01-简单选项卡/index.html">index</a></dd>
+            <dd><a href="01-简单选项卡/index2.html">index2</a></dd>
+            <dd><a href="01-简单选项卡/index3.html">index3</a></dd>
+        </dl>
+        <dl>
+            <dt>02-运动效果（1）</dt>
+            <dd><a href="02-运动效果/index.html">index</a></dd>
+        </dl>
+        <dl>
+            <dt>03-固定弹出层（1）</dt>
+            <dd><a href="03-固定弹出层/index.html">index</a></dd>
+        </dl>
+        <dl>
+            <dt>04-拖拽（1）</dt>
+            <dd><a href="04-拖拽/index.html">index</a></dd>
+        </dl>
+        <dl>
+            <dt>05-仿京东轮播图（1）</dt>
+            <dd><a href="05-仿京东轮播图/index.html">index</a></dd>
+        </dl>
+        <dl>
+            <dt>06-fullPage插件实现全屏平滑切换网页（1）</dt>
+            <dd><a href="06-fullPage插件实现全屏平滑切换网页/index.html">index</a></dd>
+        </dl>
+    </div>
+    <footer></footer>
+    </body>
+    </html>
