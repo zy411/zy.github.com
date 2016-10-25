@@ -1,0 +1,44 @@
+body {
+    background: #061;
+}
+#box {
+    width: 500px;
+    height: 400px;
+    margin: 150px auto;
+    background: #031;
+    border: 2px #091 solid;
+}
+#bt {
+    width: 400px;
+    height: 200px;
+    margin: -30px auto 0;
+    position: relative;;
+    top: 50%;
+}
+.bt {
+    width: 160px;
+    height: 60px;
+    background: #061;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.bt.left {
+    position: relative;;
+    top: 50%;
+    float: left;
+    margin: -32px 0 0 60px;
+    border: 2px #091 solid;
+}
+.bt.right {
+    position: relative;;
+    top: 50%;
+    float: right;
+    margin: -34px 60px 0 0;
+    border: 4px #091 solid;
+}
+.bt.left:hover {
+    background: #06f;
+}
