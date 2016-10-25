@@ -64,16 +64,16 @@
 <body>
 <header></header>
 <div class="content">
-<!--读取目录生成列表--!>
+<!--读取目录生成列表-->
 <?php
 	function filesinfo($hostdir){
-		$foldernames = array_values(array_diff(scandir($hostdir),array('..','.','js','css','images','test','index.php','新建文本文档.txt')));
+		$foldernames = array_values(array_diff(scandir($hostdir),array('..','.','js','css','images','test','index.php')));
         foreach ($foldernames as $foldername){
             $count = 0;
             $filenames = array_values(array_diff(scandir($foldername),array('..','.','js','css','images')));
             echo "	<dl>\n		<dt>" . $foldername . "（" . count($filenames)."）</dt>\n";
                 foreach ($filenames as $filename) {
-                    $url = "		<dd><a href=\"" . $foldername . "/" . $filename."\">" . basename($filename,'.html') . "</a></dd>\n";
+                    $url = "		<dd><a href=\"" . $foldername . "/" . $filename."\" target=\"_blank\">" . basename($filename,'.html') . "</a></dd>\n";
                     echo $url;
                 }
             echo "	</dl>\n";
