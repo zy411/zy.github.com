@@ -72,9 +72,11 @@
             $count = 0;
             $filenames = array_values(array_diff(scandir($foldername),array('..','.','js','css','images')));
             echo "	<dl>\n		<dt>" . $foldername . "（" . count($filenames)."）</dt>\n";
+            $i = 1;
                 foreach ($filenames as $filename) {
-                    $url = "		<dd><a href=\"" . $foldername . "/" . $filename."\" target=\"_blank\">" . basename($filename,'.html') . "</a></dd>\n";
+                    $url = "		<dd><a href=\"" . $foldername . "/" . $filename."\" target=\"_blank\">" . $i . ")" . basename($filename,'.html') . "</a></dd>\n";
                     echo $url;
+                    $i ++;
                 }
             echo "	</dl>\n";
             //print_r($foldernames[$count]);
