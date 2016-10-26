@@ -64,26 +64,31 @@
 <body>
 <header></header>
 <div class="content">
-<!--读取目录生成列表-->
+<!--读取目录文件生成列表-->
 <?php
 	function filesinfo($hostdir){
-		$foldernames = array_values(array_diff(scandir($hostdir),array('..','.','js','css','images','test','index.php')));
-        foreach ($foldernames as $foldername){
-            $count = 0;
-            $filenames = array_values(array_diff(scandir($foldername),array('..','.','js','css','images')));
-            echo "	<dl>\n		<dt>" . $foldername . "（" . count($filenames)."）</dt>\n";
-            $i = 1;
-                foreach ($filenames as $filename) {
-                    $url = "		<dd><a href=\"" . $foldername . "/" . $filename."\" target=\"_blank\">" . $i . ")" . basename($filename,'.html') . "</a></dd>\n";
-                    echo $url;
-                    $i ++;
+		$folders = scandir($hostdir);
+        foreach ($folders as $folder){
+            if (explode('-', $folder)[1] == true){
+                $files = scandir($folder);
+                $filenames = array();
+                foreach ($files as $file){
+                    $file = explode('.', $file);
+                    if ($file[1] == 'html'){
+                        	$filenames[] = $file[0];
+                        }
                 }
-            echo "	</dl>\n";
-            //print_r($foldernames[$count]);
-            //print_r($filenames);
-            $count ++;
-			}
+                echo "    <dl>\n        <dt>" . $folder . "（" . count($filenames)."）</dt>\n";
+                foreach ($filenames as $filename){
+                    $count = 1;
+                    $filename = explode('.', $filename);
+                    	echo "        <dd><a href=\"" . $foldername . "/" . $filename."\" target=\"_blank\">" . $count . ")" . $filename[0] . "</a></dd>\n";
+                        $count ++;
+                    }
+                echo "    </dl>\n";
+            }
     	}
+    }
 	filesinfo(getcwd());
 ?>
 </div>

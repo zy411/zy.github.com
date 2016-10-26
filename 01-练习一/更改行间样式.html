@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>更改行间样式</title>
+    <style>
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+    <script>
+        function toRed() {
+            var oDiv1=document.getElementById('div1')
+            oDiv1.style.width="200px";
+            oDiv1.style.height="200px";
+            oDiv1.style.background="red";
+        }
+        function toBlue() {
+            var oDiv1=document.getElementById('div1')
+            oDiv1.style.width="100px";
+            oDiv1.style.height="100px";
+            oDiv1.style.background="blue";
+        }
+    </script>
+</head>
+<body>
+<div id="div1" onmouseover="toRed();" onmouseout="toBlue();"></div>
+</body>
+</html>
