@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>百度导航</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #box {
+            line-height: 24px;
+            width: 56px;
+            margin: 5px auto;
+            font-size: 12px;
+            color: #00c;
+        }
+        #btn {
+            padding-left: 3px;
+            background: url(images/ico.gif) no-repeat right;
+        }
+        #ul1 {
+            text-align: center;
+            border: 1px #99f solid;
+        }
+        li {
+            list-style: none;
+            cursor: default;
+        }
+        li:hover {
+            background: #d9e1f6;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementById('btn');
+            var oUl = document.getElementById('ul1');
+            oBtn.onclick = function () {
+                if (oUl.style.display == 'block') {
+                    oUl.style.display = 'none';
+                } else {
+                    oUl.style.display = 'block';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <p id="btn">输入法</p>
+    <ul id="ul1" style="display:block;">
+        <li><a href="#"></a>手写</li>
+        <li><a href="#"></a>拼音</li>
+        <li><a href="#"></a>关闭</li>
+    </ul>
+</div>
+</body>
+</html>
