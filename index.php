@@ -65,8 +65,8 @@
 <div class="content">
 <!--读取目录文件生成列表-->
 <?php
-	function filesinfo($hostdir){
-		$folders = scandir($hostdir);
+    function filesinfo($hostdir){
+        $folders = scandir($hostdir);
         foreach ($folders as $folder){
             if (explode('-', $folder)[1] == true){
                 $files = scandir($folder);
@@ -81,13 +81,13 @@
                 foreach ($filenames as $filename){
                     $name = explode('.', $filename);
                     $count ++;
-                    	echo "        <dd><a href=\"" . $folder . "/" . $filename."\" target=\"_blank\">" . $count . ")" . $name[0] . "</a></dd>\n";
+                        echo "        <dd><a href=\"" . $folder . "/" . $filename."\" target=\"_blank\">" . $count . ")" . $name[0] . "</a></dd>\n";
                     }
                 echo "    </dl>\n";
             }
-    	}
+        }
     }
-	filesinfo(getcwd());
+    filesinfo(getcwd());
 ?>
 </div>
 <footer></footer>
