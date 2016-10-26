@@ -73,8 +73,8 @@
                 $filenames = array();
                 foreach ($files as $file){
                     if (explode('.', $file)[1] == 'html'){
-                        	$filenames[] = $file;
-                        }
+                        $filenames[] = $file;
+                    }
                 }
                 echo "    <dl>\n        <dt>" . $folder . "（" . count($filenames)."）</dt>\n";
                 $count = 0;
