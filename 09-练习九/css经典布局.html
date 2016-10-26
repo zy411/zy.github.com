@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>css经典布局</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        #container {
+            width: 100%;
+            margin: 0 auto; /*主面板DIV居中*/
+            border: 1px solid red;
+        }
+        #header {
+            width: 100%;
+            float: left;
+            clear: both;
+            border: 1px #F00 solid;
+        }
+        #header_left {
+            width: 50%;
+
+            border: 1px #F00 solid;
+            float: left;
+        }
+        #header_right {
+            width: 49%;
+            border: 1px #F00 solid;
+            float: right;
+        }
+        #main {
+            width: 100%;
+            float: left;
+            clear: both;
+            border: 1px #F00 solid;
+        }
+        #main_content {
+            width: 100%;
+
+            border: 1px solid blue;
+        }
+        #footer {
+            width: 100%;
+            float: left;
+            clear: both;
+            border: 1px #F00 solid;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <div id="header_left">
+            头部左侧
+        </div>
+        <div id="header_right">
+            头部右侧
+        </div>
+    </div>
+    <div id="main">
+        <div id="main_content">
+            主页内容
+        </div>
+    </div>
+    <div id="footer">底部（footer）</div>
+</div>
+</body>
+</html>
