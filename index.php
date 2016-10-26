@@ -73,17 +73,16 @@
                 $files = scandir($folder);
                 $filenames = array();
                 foreach ($files as $file){
-                    $file = explode('.', $file);
-                    if ($file[1] == 'html'){
-                        	$filenames[] = $file[0];
+                    if (explode('.', $file)[1] == 'html'){
+                        	$filenames[] = $file;
                         }
                 }
                 echo "    <dl>\n        <dt>" . $folder . "（" . count($filenames)."）</dt>\n";
+                $count = 0;
                 foreach ($filenames as $filename){
-                    $count = 1;
-                    $filename = explode('.', $filename);
-                    	echo "        <dd><a href=\"" . $foldername . "/" . $filename."\" target=\"_blank\">" . $count . ")" . $filename[0] . "</a></dd>\n";
-                        $count ++;
+                    $name = explode('.', $filename);
+                    $count ++;
+                    	echo "        <dd><a href=\"" . $folder . "/" . $filename."\" target=\"_blank\">" . $count . ")" . $name[0] . "</a></dd>\n";
                     }
                 echo "    </dl>\n";
             }
