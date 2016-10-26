@@ -10,10 +10,10 @@
             padding: 0;
         }
         .content {
-            width: 350px;
-            margin: auto;
-            padding: 3px 3px 2px;
-            border: 5px #3f434c solid;
+            width: 320px;
+            margin: 15px auto;
+            padding: 2px 2px 1px;
+            border: 12px #0bf solid;
             border-radius: 6px;
         }
         a {
@@ -22,24 +22,23 @@
             margin: 0 5px;
             font-size: 14px;
             color: #555;
+            line-height: 28px;
             text-decoration: none;
         }
         dt {
-            padding-left: 10px;
-            color: #333;
-            line-height: 30px;
-            height: 30px;
-            background: #09f;
             margin-bottom: 1px;
+            padding-left: 10px;
+            font-size: 18px;
+            color: #333;
             font-weight: bold;
-            cursor: pointer;
+            line-height: 32px;
+            background: #0bf;
+            cursor: default;
         }
         dd {
             display: none;
-            line-height: 25px;
-            height: 25px;
-            background: #0cf;
             margin-bottom: 1px;
+            background: #0cf;
             list-style: none;
         }
         dt:hover, dd:hover {

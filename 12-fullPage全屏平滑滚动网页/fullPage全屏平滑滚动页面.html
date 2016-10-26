@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>全屏平滑滚动网页</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script rel="script" src="../js/jquery-1.8.3.min.js"></script>
+    <script rel="script" src="js/jquery.fullPage.min.js"></script>
+    <script>
+        $(function () {
+            $(".content").fullpage({
+                //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90', '#4BBFC3', '#1bbc9b'],
+                'navigation': true,
+                anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+                menu: '#menu',
+                verticalCentered: false
+            })
+        })
+    </script>
+</head>
+<body>
+<!--头部-->
+<header class="hd">
+    <div class="inner">
+        <a href="#" class="logo"><img src="images/logo.png"></a>
+        <ul id="menu">
+            <li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+            <li data-menuanchor="page2"><a href="#page2">第二页</a></li>
+            <li data-menuanchor="page3"><a href="#page3">第三页</a></li>
+            <li data-menuanchor="page4"><a href="#page4">第四页</a></li>
+            <li data-menuanchor="page5"><a href="#page5">第五页</a></li>
+        </ul>
+    </div>
+</header>
+<div class="content">
+    <div class="fp-section s1" data-anchor="page1">
+        <img src="images\sc1.png">
+    </div>
+    <div class="fp-section s2" data-anchor="page2">
+        <div class="left">
+            <ul>
+                <li>
+                    <img src="images/img1.png">
+                    <p>望<br>30*40cm / 40*50cm</p>
+                    <a href="#">立即购买</a>
+                </li>
+                <li>
+                    <img src="images/img2.png">
+                    <p>听<br>30*40cm / 40*50cm</p>
+                    <a href="#">立即购买</a>
+                </li>
+                <li>
+                    <img src="images/img3.png">
+                    <p>悟<br>30*40cm / 40*50cm</p>
+                    <a href="#">立即购买</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <h1>观止</h1>
+            <p>价格：99元起<br>艺术家：吉祥物语</p>
+            <a href="#">主页主页</a>
+        </div>
+        <div class="bg">
+            <img src="images/sc2.png">
+        </div>
+    </div>
+    <div class="fp-section s3" data-anchor="page3">
+        <div class="left">
+            <ul>
+                <li>
+                    <img src="images/img4.png">
+                    <p>Love<br>50*60cm</p>
+                    <a href="#">立即购买</a>
+                </li>
+                <li>
+                    <img src="images/img5.png">
+                    <p>Filial and eros aw<br>50*60cm</p>
+                    <a href="#">立即购买</a>
+                </li>
+                <li>
+                    <img src="images/img6.png">
+                    <p>Good Time<br>50*60cm</p>
+                    <a href="#">立即购买</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <h1>KIDS</h1>
+            <p>价格：249元<br>Chow-Lee</p>
+            <a href="#">主页主页</a>
+        </div>
+        <div class="bg">
+            <img src="images/sc3.png">
+        </div>
+    </div>
+    <div class="fp-section s4" data-anchor="page4">
+        <div class="left">
+            <ul>
+                <li>
+                    <img src="images/img7.png">
+                    <p>绽放2009<br>60*60cm</p>
+                    <a href="#">立即购买</a>
+                </li>
+                <li>
+                    <img src="images/img8.png">
+                    <p>绽放2010<br>60*60cm</p>
+                    <a href="#">立即购买</a>
+                </li>
+                <li>
+                    <img src="images/img9.png">
+                    <p>绽放2011<br>60*60cm</p>
+                    <a href="#">立即购买</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <h1>绽放</h1>
+            <p>价格：269元<br>艺术家：北邦</p>
+            <a href="#">主页主页</a>
+        </div>
+        <div class="bg">
+            <img src="images/sc4.png">
+        </div>
+    </div>
+    <div class="fp-section s5" data-anchor="page5">
+        <div class="left">
+            <ul>
+                <li>
+                    <img src="images/img10.png">
+                    <p>栖息<br>50*60cm</p>
+                    <a href="#">立即购买</a>
+                </li>
+                <li>
+                    <img src="images/img11.png">
+                    <p>惊蛰<br>50*60cm</p>
+                    <a href="#">立即购买</a>
+                </li>
+                <li>
+                    <img src="images/img12.png">
+                    <p>恬静<br>50*60cm</p>
+                    <a href="#">立即购买</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <h1>沉睡的森林</h1>
+            <p>价格：249元<br>艺术家：赵娜</p>
+            <a href="#">主页主页</a>
+        </div>
+        <div class="bg">
+            <img src="images/sc5.png">
+        </div>
+    </div>
+</div>
+<footer></footer>
+</body>
+</html>

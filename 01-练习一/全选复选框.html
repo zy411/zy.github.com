@@ -3,18 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>全选复选框</title>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementById('btn');
+            var aInput = document.getElementsByTagName('input');
+            oBtn.onclick = function () {
+                console.log(aInput[1].checked);
+                if (aInput[1].checked == false) {
+                    for (var i = 0; i < aInput.length; i++) {
+                        aInput[i].checked = true;
+                    }
+                } else {
+                    for (var i = 0; i < aInput.length; i++) {
+                        aInput[i].checked = false;
+                    }
+                }
+
+            }
+        }
+    </script>
 </head>
 <body>
-<p>全选</p>
-<input type="checkbox"><br>
-<input type="checkbox"><br>
-<input type="checkbox"><br>
-<input type="checkbox"><br>
-<input type="checkbox"><br>
-<input type="checkbox"><br>
-<input type="checkbox"><br>
-<input type="checkbox"><br>
-<input type="checkbox"><br>
-<input type="checkbox"><br>
+<label id="btn"><input type="checkbox"><span>全选</span></label><br>
+<label><input type="checkbox"><span>1</span></label><br>
+<label><input type="checkbox"><span>2</span></label><br>
+<label><input type="checkbox"><span>3</span></label><br>
+<label><input type="checkbox"><span>4</span></label><br>
+<label><input type="checkbox"><span>5</span></label><br>
+<label><input type="checkbox"><span>6</span></label><br>
+<label><input type="checkbox"><span>7</span></label><br>
+<label><input type="checkbox"><span>8</span></label><br>
+<label><input type="checkbox"><span>9</span></label><br>
 </body>
 </html>

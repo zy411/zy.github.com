@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>for循环加事件</title>
+    <script>
+        window.onload = function () {
+            var aBtn = document.getElementsByTagName('input');
+            for (var i = 0; i < aBtn.length; i++) {
+                aBtn[i].onclick = function(){
+                    alert(this.value);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="按钮一">
+<input type="button" value="按钮二">
+<input type="button" value="按钮三">
+</body>
+</html>
